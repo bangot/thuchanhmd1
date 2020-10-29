@@ -6,15 +6,16 @@
 </head>
 <body>
 <script>
-    var checkNguyenAm = function(array){
-        if((array.indexOf('a') > -1) || (array.indexOf('o') > -1) || (array.indexOf('e') > -1) || (array.indexOf('u') > -1) || (array.indexOf('i') > -1)){
-            return true;
-        }else {
-            return false;
+    function soNguyenam(arr) {
+        let count = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === 'a' || arr[i] === 'o' || arr[i] === 'e' || arr[i] === 'u' || arr[i] === 'i') {
+                return true;
+            }
         }
+        return false;
     }
-
-    console.log(checkNguyenAm(['g','a','y','i']))
+    console.log(soNguyenam(['g','h','y','i']))
 </script>
 </body>
 </html>
