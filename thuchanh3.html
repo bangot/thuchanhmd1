@@ -6,16 +6,27 @@
 </head>
 <body>
 <script>
-    function soNguyenam(arr) {
-        let count = 0;
-        for (let i = 0; i < arr.length; i++) {
-            if (arr[i] === 'a' || arr[i] === 'o' || arr[i] === 'e' || arr[i] === 'u' || arr[i] === 'i') {
-                return true;
+    let str=prompt("Chuoi kiem tra")
+    let checkArr=["a","o","u","i","e"]
+    let result="";
+    function check(str) {
+        let count=0;
+        for (let i = 0; i < str.length; i++) {
+            for (let j = 0; j < checkArr.length; j++) {
+                if (checkArr[j]==str[i]){
+                    count++
+                }
             }
         }
-        return false;
+        if(count===0){
+            return `Chuỗi không chứa ký tự nguyên âm`;
+        }
+        else {
+            return `Chuỗi có số ký tự nguyên âm là: ${count}`;
+
+        }
     }
-    console.log(soNguyenam(['g','h','y','i']))
+    alert(check(str));
 </script>
 </body>
 </html>
